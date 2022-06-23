@@ -19,15 +19,19 @@ public class LengthLoopLL {
             fast = fast.next.next;
             slow = slow.next;
             if (fast == slow) {
+                //if they meet i will introduce the count and will move the slow one by one
                 int count = 1;
                 slow =slow.next;
+                //until the slow reaches fast again
                 while (fast != slow) {
+                    //add the count
                     count++;
-                    fast = fast.next;
+                    //move the slow
+                    slow = slow.next;
 
-                }return count;
+                }return count;   //return the count
             }
-        }return 0;
+        }return 0;  //else return 0
     }
 
     public static void main(String[] args) {
